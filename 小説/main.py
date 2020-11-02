@@ -12,7 +12,7 @@ res = requests.get('https://localprod.pandateacher.com/python-manuscript/crawler
 txt = res.text
 
 soup = BeautifulSoup(txt, "html.parser")
-item = soup.find_all(name='div', class_='books')
+item = soup.select('div .books')
 print(item)
 rf(19)
 line(70)
